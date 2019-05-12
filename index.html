@@ -7,7 +7,7 @@
     </head>
 
     <body>
-        <div class="container text-center">
+        <div class="container text-center py-5">
             <h1>Tower of Hanoi</h1>
 
             <h3>Directions</h3>
@@ -17,7 +17,7 @@
 
             <div class="row border justify-content-around align-items-center">
                 <div class="col-sm-3">
-                    <div class="stack" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <div class="stack" id="stack1" ondrop="drop(event)" ondragover="allowDrop(event)">
                         <div class="block" id="block-1" draggable="true" ondragstart="drag(event)"></div>
                         <div class="block" id="block-2" draggable="true" ondragstart="drag(event)"></div>
                         <div class="block" id="block-3" draggable="true" ondragstart="drag(event)"></div>
@@ -25,15 +25,22 @@
                 </div>
 
                 <div class="col-sm-3">
-                    <div class="stack" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <div class="stack" id="stack2" ondrop="drop(event)" ondragover="allowDrop(event)">
                     </div>
                 </div>
 
                 <div class="col-sm-3">
-                    <div class="stack" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <div class="stack" id="stack3" ondrop="drop(event)" ondragover="allowDrop(event); checkGoal()">
                     </div>
                 </div>
             </div>
+        </div>
+
+        <div class="container text-center border">
+            <h1>You Win!</h1>
+
+            <h3>Want to Play Again?</h3>
+            <button type="button" class="btn btn-danger" onclick="resetGame()">Reset</button>
         </div>
 
         <script type="text/javascript" src="hanoi.js"></script>
