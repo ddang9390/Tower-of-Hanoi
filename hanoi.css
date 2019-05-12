@@ -1,3 +1,8 @@
+body,
+button {
+  font-family: Roboto, sans-serif;
+}
+
 .stack{
     height: 150px;
     border: 1px solid black;
@@ -26,4 +31,11 @@
 #block-3{
     width: 100px;
     background-color: green;
+}
+
+.short-text{display: none;}
+
+@media(max-width: 575px){
+    .short-text{display: inline-block;}
+    .full-text{display: none;}
 }
