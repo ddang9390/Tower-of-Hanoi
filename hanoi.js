@@ -5,6 +5,11 @@ var goal = document.getElementById("stack3");
 var gameover = false;
 var draggeddisc;
 
+/**
+ * Allow drop to happen if there are no blocks in the current stack or if the
+ * block to be dropped is the smallest
+ * @param {event} ev 
+ */
 function allowDrop(ev) {
     var stack = ev.currentTarget;
 
@@ -16,6 +21,10 @@ function allowDrop(ev) {
     
 }
 
+/**
+ * Drag the block if it is at the top of the stack
+ * @param {event} ev 
+ */
 function drag(ev) {
     if(ev.target.parentElement.children[0].id == ev.target.id){
         ev.dataTransfer.setData("text", ev.target.id);
@@ -27,6 +36,10 @@ function drag(ev) {
     
 }
 
+/**
+ * Drop the block onto the stack
+ * @param {event} ev 
+ */
 function drop(ev) {
     ev.preventDefault();
     var data = ev.dataTransfer.getData("text");
@@ -38,12 +51,18 @@ function drop(ev) {
     //stack.appendChild(document.getElementById(data));
 }
 
+/**
+ * Check if the player won
+ */
 function checkGoal(){
     if(goal.children.length == 3){
         document.getElementById("win").style.display = "block";
     }
 }
 
+/**
+ * Reset the game
+ */
 function resetGame(){
     location.reload();
 }
