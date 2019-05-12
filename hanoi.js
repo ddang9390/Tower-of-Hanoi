@@ -40,7 +40,7 @@ function drop(ev) {
 
 function checkGoal(){
     if(goal.children.length == 3){
-        gameover = true;
+        document.getElementById("win").style.display = "block";
     }
 }
 

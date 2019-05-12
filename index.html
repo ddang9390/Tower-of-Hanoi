@@ -30,13 +30,13 @@
                 </div>
 
                 <div class="col-sm-3">
-                    <div class="stack" id="stack3" ondrop="drop(event)" ondragover="allowDrop(event); checkGoal()">
+                    <div class="stack" id="stack3" ondrop="drop(event); checkGoal()" ondragover="allowDrop(event)">
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="container text-center border">
+        <div id="win" class="container text-center border" style="display:none;">
             <h1>You Win!</h1>
 
             <h3>Want to Play Again?</h3>
