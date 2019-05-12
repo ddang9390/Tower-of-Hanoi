@@ -11,26 +11,26 @@
             <h1>Tower of Hanoi</h1>
 
             <h3>Directions</h3>
-            <p>Move all discs from left most stick to right most stick</p>
-            <p>Press one stick to select the disc to move and press another to move that disc there</p>
+            <p>Move all discs from left-most box to the right-most box</p>
+            <p>Drag one disc to another box to place it there</p>
             <p>You cannot put a larger disc on a smaller one</p>
 
             <div class="row border justify-content-around align-items-center">
                 <div class="col-sm-3">
-                    <div class="stack">
-                        <div class="block" id="block-1"></div>
-                        <div class="block" id="block-2"></div>
-                        <div class="block" id="block-3"></div>
+                    <div class="stack" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        <div class="block" id="block-1" draggable="true" ondragstart="drag(event)"></div>
+                        <div class="block" id="block-2" draggable="true" ondragstart="drag(event)"></div>
+                        <div class="block" id="block-3" draggable="true" ondragstart="drag(event)"></div>
                     </div>
                 </div>
 
                 <div class="col-sm-3">
-                    <div class="stack">
+                    <div class="stack" ondrop="drop(event)" ondragover="allowDrop(event)">
                     </div>
                 </div>
 
                 <div class="col-sm-3">
-                    <div class="stack">
+                    <div class="stack" ondrop="drop(event)" ondragover="allowDrop(event)">
                     </div>
                 </div>
             </div>
