@@ -1,0 +1,20 @@
+.block{
+    height: 25px;
+    border: 1px solid black;
+    margin: auto;
+}
+
+#block-1{
+    width: 25px;
+    background-color: red;
+}
+
+#block-2{
+    width: 50px;
+    background-color: white;
+}
+
+#block-3{
+    width: 100px;
+    background-color: green;
+}

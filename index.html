@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>Hanoi Tower</title>
+
+        <link rel="stylesheet" href="hanoi.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+
+    <body>
+        <div class="container text-center">
+            <h1>Tower of Hanoi</h1>
+
+            <h3>Directions</h3>
+            <p>Move all discs from left most stick to right most stick</p>
+            <p>Press one stick to select the disc to move and press another to move that disc there</p>
+            <p>You cannot put a larger disc on a smaller one</p>
+
+            <div class="row border justify-content-around align-items-center">
+                <div class="col-sm-3">
+                    <div class="stack">
+                        <div class="block" id="block-1"></div>
+                        <div class="block" id="block-2"></div>
+                        <div class="block" id="block-3"></div>
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <div class="stack">
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <div class="stack">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="hanoi.js"></script>
+    </body>
+</html>
